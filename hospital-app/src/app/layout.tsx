@@ -1,4 +1,5 @@
 import './globals.css'
+import 'leaflet/dist/leaflet.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
@@ -26,6 +27,9 @@ export default function RootLayout({
               <span className="ml-2 text-2xl font-bold text-gray-900">MediCare</span>
             </Link>
             <nav className="ml-auto flex gap-4 sm:gap-6">
+            <Link href="/search" className="text-sm font-medium hover:underline underline-offset-4">
+                Search Hospitals
+              </Link>
               <Link href="/features" className="text-sm font-medium hover:underline underline-offset-4">
               Features & Benefits 
               </Link>

@@ -4,6 +4,7 @@ import { Input } from "@/app/components/ui/input"
 import { Activity, Clipboard, Users, Phone, Clock, Bed, UserPlus, Package, Database, Layers } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const backgroundImages = [
   "/1.jpg",
@@ -23,6 +24,8 @@ export default function LandingPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [nextImageIndex, setNextImageIndex] = useState(1)
   const [isTransitioning, setIsTransitioning] = useState(false)
+  const [email, setEmail] = useState("")
+  const router = useRouter()
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -36,6 +39,13 @@ export default function LandingPage() {
 
     return () => clearInterval(intervalId)
   }, [nextImageIndex])
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (email) {
+      router.push(`/find-hospital?email=${encodeURIComponent(email)}`)
+    }
+  }
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -87,8 +97,16 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <form className="flex space-x-2">
-                  <Input className="max-w-lg flex-1" placeholder="Enter your email" type="email" />
+              <form className="flex space-x-2" onSubmit={handleSubmit}>
+                  {/* <Input className="max-w-lg flex-1" placeholder="Enter your email" type="email" /> */}
+                  <Input
+                    className="max-w-lg flex-1"
+                    placeholder="Enter your email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
                   <Button type="submit" className=" text-white px-4 py-2 rounded-md hover:bg-blue-700"><strong>Get Started</strong></Button>
                 </form>
                 <p className="text-xs text-white ">

@@ -13,7 +13,7 @@ const SearchHospital = () => {
   const [radius, setRadius] = useState(1000) // 1km default radius
   const [hospitals, setHospitals] = useState([])
   const mapRef = useRef(null)
-
+  console.log(userLocation)
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(

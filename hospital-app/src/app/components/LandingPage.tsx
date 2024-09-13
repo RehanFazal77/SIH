@@ -1,9 +1,8 @@
 "use client";
 import { Button } from "@/app/components/ui/button"
 import { Input } from "@/app/components/ui/input"
-import { Activity, Clipboard, Users, Phone, Clock, Bed, UserPlus, Package, Database, Layers } from "lucide-react"
+import { Clipboard, Users, Phone, Clock, Bed, UserPlus, Package, Database } from "lucide-react"
 import { useState, useEffect } from "react"
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
 const backgroundImages = [

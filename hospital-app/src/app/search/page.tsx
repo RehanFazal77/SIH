@@ -1,12 +1,6 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { GoogleMap, LoadScript, Marker, Circle } from '@react-google-maps/api'
-
-const mapContainerStyle = {
-  width: '100%',
-  height: '400px'
-}
 
 const SearchHospital = () => {
   const [userLocation, setUserLocation] = useState({ lat: 0, lng: 0 })
@@ -14,6 +8,8 @@ const SearchHospital = () => {
   const [hospitals, setHospitals] = useState([])
   const mapRef = useRef(null)
   console.log(userLocation)
+  console.log(hospitals)
+  console.log(setHospitals)
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(

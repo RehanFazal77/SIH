@@ -53,7 +53,6 @@ const mockHospitals: Hospital[] = [
   }
 ];
 
-
 const hospitalServices = [
   "Electronic Health Records",
   "Staff Management",
@@ -65,7 +64,7 @@ const hospitalServices = [
   "Hospital Information Systems (HIS)"
 ]
 
-export default function NearestHospitals() {
+function NearestHospitalsContent() {
   const searchParams = useSearchParams()
   const state = searchParams.get('state')
   const district = searchParams.get('district')
@@ -121,5 +120,11 @@ export default function NearestHospitals() {
         ))}
       </div>
     </div>
+  )
+}
+
+export default function NearestHospitals() {
+  return (
+    <NearestHospitalsContent />
   )
 }

@@ -15,13 +15,44 @@ type Hospital = {
 }
 
 const mockHospitals: Hospital[] = [
-  { id: '1', name: 'City General Hospital', address: '123 Main St, City', distance: 1.2 },
-  { id: '2', name: 'St. Mary\'s Medical Center', address: '456 Oak Ave, City', distance: 2.5 },
-  { id: '3', name: 'Sunshine Community Hospital', address: '789 Elm St, City', distance: 3.8 },
-  { id: '4', name: 'Sunshine Community Hospital', address: '789 Elm St, City', distance: 3.8 },
-  { id: '5', name: 'Sunshine Community Hospital', address: '789 Elm St, City', distance: 3.8 },
-  { id: '6', name: 'Sunshine Community Hospital', address: '789 Elm St, City', distance: 3.8 },
-]
+  {
+    id: '1',
+    name: 'All India Institute Of Medical Sciences Delhi',
+    address: 'Sri Aurobindo Marg, Ansari Nagar, New Delhi, Delhi 110029',
+    distance: 9.5
+  },
+  {
+    id: '2',
+    name: 'Delhi Surgical Centre',
+    address: 'Daryaganj, Near Golcha Cinema, New Delhi, Delhi 110002',
+    distance: 4.2
+  },
+  {
+    id: '3',
+    name: 'AK Institute Of Ophthalmology',
+    address: 'E-18, Ground Floor, South Extension I, New Delhi, Delhi 110049',
+    distance: 9.0
+  },
+  {
+    id: '4',
+    name: 'Medanta The Medicity',
+    address: 'Sector 38, Gurugram, Haryana 122001',
+    distance: 29.0
+  },
+  {
+    id: '5',
+    name: 'VMMC & Safdarjung Hospital',
+    address: 'Ring Road, Safdarjung Enclave, New Delhi, Delhi 110029',
+    distance: 9.0
+  },
+  {
+    id: '6',
+    name: 'Sukhmani Hospital',
+    address: 'B-7/115A, Safdarjung Enclave, New Delhi, Delhi 110029',
+    distance: 8.8
+  }
+];
+
 
 const hospitalServices = [
   "Electronic Health Records",

@@ -30,6 +30,9 @@ export default function RootLayout({
             <Link href="/search" className="text-sm font-medium hover:underline underline-offset-4">
                 Search Hospitals
               </Link>
+              <Link href="/dashboard" className="text-sm font-medium hover:underline underline-offset-4">
+                Dashboard
+              </Link>
               <Link href="/features" className="text-sm font-medium hover:underline underline-offset-4">
               Features & Benefits 
               </Link>
